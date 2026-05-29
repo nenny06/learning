@@ -1,0 +1,36 @@
+func main(){ //returns alert if it sees any of the parameters in a slice input
+
+if len(os.Args) < 2 {
+		fmt.Print("Error")
+		return
+	}
+	comcheck := []string{
+		"01", "galaxy", "galaxy 01",
+	}
+	come := strings.Join(comcheck, " ")
+	for i, _ := range os.Args {
+		if strings.Contains(come, os.Args[i]) {
+			fmt.Println("Alert!!")
+			return
+		}
+	}
+}
+
+
+
+if len(os.Args) < 2 {
+		fmt.Print("Error")
+		return
+	}
+	if len(os.Args) == 0 {
+		fmt.Print(0)
+		return
+	}
+	input := os.Args[1:]
+	count := 0
+	for _, word := range input {
+		for range word {
+			count++
+		}
+	}
+	fmt.Println(count)// receives a string and return the number of word in the string
