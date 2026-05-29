@@ -1,3 +1,10 @@
+package main
+
+import (
+  "strconv"
+)
+
+
 func Chunk(slice []int, size int) [][]int {//slices an exiting array into subarray 
 //using the number inputted as aguide
 	if size == 0 {
@@ -13,4 +20,21 @@ func Chunk(slice []int, size int) [][]int {//slices an exiting array into subarr
 		result = append(result, subslice)
 	}
 	return result
+}
+
+func BinaryAddition(a int, b int) []int {// convert the sum of int to binary and return in slice of int
+	if a < 0 || b < 0 {
+		return nil
+	}
+	result1 := []int{}
+
+	final := a + b
+
+	good := strconv.FormatInt(int64(final), 2)
+
+	for _, r := range good {
+		result1 = append(result1, int(r-'0'))
+	}
+
+	return result1
 }
