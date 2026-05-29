@@ -1,3 +1,10 @@
+package main
+import (
+  "os"
+  "strings"
+  "fmt"
+)
+
 func main(){ //returns alert if it sees any of the parameters in a slice input
 
 if len(os.Args) < 2 {
@@ -16,7 +23,11 @@ if len(os.Args) < 2 {
 	}
 }
 
-
+package main
+import (
+  "fmt"
+  "os"
+)
 
 if len(os.Args) < 2 {
 		fmt.Print("Error")
