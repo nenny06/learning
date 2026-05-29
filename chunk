@@ -1,0 +1,16 @@
+func Chunk(slice []int, size int) [][]int {//slices an exiting array into subarray 
+//using the number inputted as aguide
+	if size == 0 {
+		fmt.Println("\n")
+	}
+	result := [][]int{}
+	for i := 0; i < len(slice); i += size {
+		end := i + size
+		if end > len(slice) {
+			end = len(slice)
+		}
+		subslice := slice[i:end]
+		result = append(result, subslice)
+	}
+	return result
+}
